@@ -996,6 +996,69 @@ EFS was successfully mounted using NFSv4.1.
 * Infrastructure troubleshooting
 
 ---
+## 📸 Project Screenshots
+
+### 1. 🏗️ VPC Architecture
+
+Shows the three-VPC architecture used for Management, ERP, and Application workloads.
+
+![VPC Architecture](screenshots/vpc-architecture.png)
+
+### 2. ⚖️ Application Load Balancer
+
+Internet-facing Application Load Balancer distributing traffic across the application tier.
+
+![Application Load Balancer](screenshots/alb.png)
+
+### 3. 🎯 Target Group — High Availability
+
+Target Group showing both application servers registered and healthy.
+
+![Target Group](screenshots/target-group-healthy.png)
+
+### 4. 🔄 Auto Scaling — Self-Healing
+
+Auto Scaling Group automatically launched a replacement instance after an application instance was terminated.
+
+![Auto Scaling Self Healing](screenshots/asg-self-healing.png)
+
+### 5. 💾 EFS — Shared Storage
+
+Amazon EFS provides shared storage between application servers across Availability Zones.
+
+![EFS Shared Storage](screenshots/efs-shared-storage.png)
+
+### 6. 🗄️ Private RDS PostgreSQL
+
+Private PostgreSQL database deployed without public internet access.
+
+![RDS PostgreSQL](screenshots/rds-postgresql.png)
+
+### 7. 🤖 Automated RDS Backup — Lambda + EventBridge
+
+AWS Lambda creates automated RDS snapshots, triggered by an EventBridge scheduled rule.
+
+![Lambda Backup](screenshots/rds-backup-lambda.png)
+
+### 8. 📊 CloudWatch Monitoring
+
+CloudWatch alarms monitor CPU utilization for both the application and ERP database tiers.
+
+![CloudWatch Monitoring](screenshots/cloudwatch-monitoring.png)
+
+### 9. 💾 RDS Backup Snapshots
+
+Automated RDS snapshots are created and retained for recovery.
+
+![RDS Snapshots](screenshots/rds-snapshots.png)
+
+### 10. 🌎 Cross-Region Disaster Recovery
+
+RDS snapshot copied to the secondary AWS Region for disaster recovery.
+
+![Cross Region DR](screenshots/rds-cross-region-dr.png)
+
+---
 
 # 📋 Project Status
 
